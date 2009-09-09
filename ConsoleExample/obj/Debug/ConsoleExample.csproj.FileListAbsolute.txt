@@ -1,0 +1,7 @@
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.exe
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.pdb
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.dll
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.pdb
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ResolveAssemblyReference.cache
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
+C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
