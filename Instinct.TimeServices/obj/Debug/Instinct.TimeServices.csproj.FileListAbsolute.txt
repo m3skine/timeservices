@@ -3,3 +3,8 @@ C:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\bin\Debug\Instinct.Ti
 C:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\bin\Debug\Instinct.TimeServices.pdb
 C:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\obj\Debug\Instinct.TimeServices.dll
 C:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\obj\Debug\Instinct.TimeServices.pdb
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\bin\Debug\Instinct.TimeServices.dll
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\bin\Debug\Instinct.TimeServices.pdb
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\obj\Debug\ResolveAssemblyReference.cache
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\obj\Debug\Instinct.TimeServices.dll
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices\obj\Debug\Instinct.TimeServices.pdb

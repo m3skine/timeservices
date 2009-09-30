@@ -5,3 +5,10 @@ C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServi
 C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ResolveAssemblyReference.cache
 C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
 C:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.exe
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.pdb
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.dll
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.pdb
+F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ResolveAssemblyReference.cache

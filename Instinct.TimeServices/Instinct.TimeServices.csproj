@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,15 +33,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instinct_\CommandBinaryLog.cs" />
+    <Compile Include="Instinct_\ReverseComparer.cs" />
+    <Compile Include="Instinct_\LinkNode.cs" />
+    <Compile Include="Instinct_\LinkChain.cs" />
+    <Compile Include="Time\TimeEngineXEvaluateFrame.cs" />
+    <Compile Include="Time\TimeEngineXHibernate.cs" />
+    <Compile Include="Time\TimeEngineXThread.cs" />
+    <Compile Include="Time\TimeEngineXAdd.cs" />
+    <Compile Include="Time\TimeSettings.cs" />
+    <Compile Include="Time\Link.cs" />
+    <Compile Include="Time\TimeEngine.cs" />
+    <Compile Include="Time\TimePrecision.cs" />
     <Compile Include="Instinct_\Pattern\Disposeable.cs" />
     <Compile Include="Instinct_\Pattern\FrugalThreadPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Time\TimeStation.cs" />
-    <Compile Include="Time\TimeEngine.cs" />
-    <Compile Include="Time\TimeLinkBase.cs" />
-    <Compile Include="Time\TimePrecision.cs" />
+    <Compile Include="TimeX\LinkBase.cs" />
+    <Compile Include="TimeX\TimeStation.cs" />
+    <Compile Include="TimeX\TimeEngine.cs" />
+    <Compile Include="TimeX\TimePrecision.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

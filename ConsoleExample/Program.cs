@@ -1,4 +1,6 @@
 ﻿using System;
+using Instinct.Sample;
+using Instinct.Time;
 namespace ConsoleExample
 {
     /// <summary>
@@ -12,8 +14,19 @@ namespace ConsoleExample
         /// <param name="args">The args.</param>
         static void Main(string[] args)
         {
-            var timeEngine = new TimeEngine();
-            timeEngine.EvaluateFrame(100);
+            Console.WriteLine("Start.");
+            using (var timeEngine = new TimeEngine())
+            {
+                var linkItem = new LinkItem();
+                linkItem.Action = delegate(TimeEngine.ThreadContext threadContext)
+                {
+                    threadContext.AddValue(linkItem.Link, TimePrecision.ParseTime(1.0M));
+                    Console.WriteLine(".");
+                };
+                timeEngine.AddValue(linkItem.Link, TimePrecision.ParseTime(1.25M));
+                timeEngine.EvaluateFrame(100);
+            }
+            Console.WriteLine("Done.");
         }
     }
 }

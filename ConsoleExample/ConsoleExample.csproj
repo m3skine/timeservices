@@ -34,9 +34,10 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sample.cs" />
-    <Compile Include="TimeEngine.cs" />
-    <Compile Include="SampleContext.cs" />
+    <Compile Include="Sample\LinkItem.cs" />
+    <Compile Include="Sample\ListItem.cs" />
+    <Compile Include="Sample\SimpleContext.cs" />
+    <Compile Include="Sample\TimeEngine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

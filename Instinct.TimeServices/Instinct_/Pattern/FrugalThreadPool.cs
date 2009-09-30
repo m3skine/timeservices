@@ -8,10 +8,13 @@ namespace Instinct_.Pattern
     public class FrugalThreadPool : Pattern.Disposeable
     {
         private Thread[] _threadPool;
+        private object[] _threadContext;
         private System.Collections.Generic.Queue<System.Collections.IEnumerable> _workQueue = new System.Collections.Generic.Queue<System.Collections.IEnumerable>();
         private ThreadStatus _threadStatus = ThreadStatus.Idle;
         private int _joiningThreadPoolCount;
         private object _joiningObject = new object();
+        private System.Func<object> _threadContextBuilder;
+        private System.Action<object, object> _executor;
 
         #region Class Types
         /// <summary>
@@ -22,7 +25,7 @@ namespace Instinct_.Pattern
             /// <summary>
             /// Executes this instance.
             /// </summary>
-            void Execute();
+            void Execute(object threadContext);
         }
 
         /// <summary>
@@ -49,7 +52,7 @@ namespace Instinct_.Pattern
         /// Initializes a new instance of the <see cref="FrugalThreadPool"/> class.
         /// </summary>
         public FrugalThreadPool()
-            : this(4)
+            : this(4, null, null)
         {
         }
         /// <summary>
@@ -57,14 +60,37 @@ namespace Instinct_.Pattern
         /// </summary>
         /// <param name="threadCount">The thread count.</param>
         public FrugalThreadPool(int threadCount)
+            : this(threadCount, null, null)
         {
+        }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FrugalThreadPool"/> class.
+        /// </summary>
+        /// <param name="threadCount">The thread count.</param>
+        /// <param name="threadContextBuilder">The thread context builder.</param>
+        public FrugalThreadPool(int threadCount, System.Func<object> threadContextBuilder)
+            : this(threadCount, null, threadContextBuilder)
+        {
+        }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FrugalThreadPool"/> class.
+        /// </summary>
+        /// <param name="threadCount">The thread count.</param>
+        /// <param name="threadContext">The thread context.</param>
+        public FrugalThreadPool(int threadCount, System.Action<object, object> executor, System.Func<object> threadContextBuilder)
+        {
+            _executor = executor;
             _threadPool = new Thread[threadCount];
+            _threadContext = new object[threadCount];
+            _threadContextBuilder = threadContextBuilder;
             for (int threadIndex = 0; threadIndex < _threadPool.Length; threadIndex++)
             {
-                Thread thread = _threadPool[threadIndex] = new Thread(new ThreadStart(ThreadWorker)) { Name = "FrugalPool: " + threadIndex.ToString() };
-                thread.Start();
+                object threadContext;
+                _threadPool[threadIndex] = CreateAndStartThread("FrugalPool: " + threadIndex.ToString(), out threadContext);
+                _threadContext[threadIndex] = threadContext;
             }
         }
+
         /// <summary>
         /// Releases unmanaged and - optionally - managed resources
         /// </summary>
@@ -86,9 +112,31 @@ namespace Instinct_.Pattern
         }
 
         /// <summary>
+        /// Creates the and start thread.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns></returns>
+        private Thread CreateAndStartThread(string name, out object threadContext)
+        {
+            Thread thread = new Thread(ThreadWorker) { Name = name };
+            threadContext = (_threadContextBuilder == null ? null : _threadContextBuilder());
+            thread.Start(threadContext);
+            return thread;
+        }
+
+        /// <summary>
+        /// Gets the thread context.
+        /// </summary>
+        /// <value>The thread context.</value>
+        public object[] ThreadContexts
+        {
+            get { return _threadContext; }
+        }
+
+        /// <summary>
         /// Threads the worker.
         /// </summary>
-        private void ThreadWorker()
+        private void ThreadWorker(object threadContext)
         {
             System.Collections.IEnumerable list;
             while (true)
@@ -115,9 +163,19 @@ namespace Instinct_.Pattern
                 }
                 if (list != null)
                 {
-                    foreach (IThreadWork @object in list)
+                    if (_executor != null)
                     {
-                        @object.Execute();
+                        foreach (object @object in list)
+                        {
+                            _executor(@object, threadContext);
+                        }
+                    }
+                    else
+                    {
+                        foreach (IThreadWork @object in list)
+                        {
+                            @object.Execute(threadContext);
+                        }
                     }
                 }
             }
@@ -160,6 +218,15 @@ namespace Instinct_.Pattern
                 }
                 _threadStatus = ThreadStatus.Idle;
             }
+        }
+        /// <summary>
+        /// Joins this instance.
+        /// </summary>
+        /// <param name="executor">The executor.</param>
+        public void Join(System.Action<object, object> executor)
+        {
+            Join();
+            _executor = executor;
         }
     }
 }
