@@ -1,4 +1,4 @@
-namespace Instinct.Time
+namespace Instinct.TimeX
 {
     /// <summary>
     /// TimeStation

@@ -1,9 +1,9 @@
-﻿namespace ConsoleExample
+﻿namespace Instinct.Sample
 {
     /// <summary>
-    /// SampleContext
+    /// SimpleContext
     /// </summary>
-    public class SampleContext : System.ICloneable
+    public class SimpleContext : System.ICloneable
     {
         #region Class Types
         /// <summary>
@@ -24,9 +24,9 @@
         #endregion Class Types
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SampleContext"/> class.
+        /// Initializes a new instance of the <see cref="SimpleContext"/> class.
         /// </summary>
-        public SampleContext()
+        public SimpleContext()
         {
         }
 
@@ -48,7 +48,7 @@
         /// </returns>
         public object Clone()
         {
-            return (SampleContext)MemberwiseClone();
+            return (SimpleContext)MemberwiseClone();
         }
     }
 }

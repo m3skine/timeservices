@@ -1,10 +1,10 @@
 using Instinct_.Pattern;
-namespace Instinct.Time
+namespace Instinct.TimeX
 {
     /// <summary>
-    /// TimeLinkBase
+    /// LinkBase
     /// </summary>
-    public abstract class TimeLinkBase : FrugalThreadPool.IThreadWork
+    public abstract class LinkBase : FrugalThreadPool.IThreadWork
     {
         /// <summary>
         /// Gets or sets the hibernate time.
@@ -16,11 +16,11 @@ namespace Instinct.Time
         /// Gets or sets the next.
         /// </summary>
         /// <value>The next.</value>
-        public TimeLinkBase NextTimeLink;
+        public LinkBase NextLink;
 
         /// <summary>
         /// Evaluates the time.
         /// </summary>
-        public abstract void Execute();
+        public abstract void Execute(object threadContext);
     }
 }

@@ -1,9 +1,10 @@
-﻿namespace ConsoleExample
+﻿using Instinct.Time;
+namespace Instinct.Sample
 {
     /// <summary>
     /// TimeEngine
     /// </summary>
-    public class TimeEngine : Instinct.Time.TimeEngine<Sample, SampleContext>
+    public class TimeEngine : TimeEngine<ListItem, SimpleContext>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeEngine"/> class.
@@ -17,9 +18,9 @@
         /// Creates the context.
         /// </summary>
         /// <returns></returns>
-        protected override SampleContext CreateContext()
+        protected override SimpleContext CreateContext()
         {
-            return new SampleContext();
+            return new SimpleContext();
         }
 
         /// <summary>
@@ -27,16 +28,16 @@
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="contextFlag">The context flag.</param>
-        public override void UpdateContext(SampleContext thisContext, SampleContext nextContext, ulong updateVectors)
+        protected override void UpdateContext(SimpleContext thisContext, SimpleContext nextContext, ulong updateVectors)
         {
-            var vectors = (SampleContext.UpdateVector)updateVectors;
+            var vectors = (SimpleContext.UpdateVector)updateVectors;
             string value;
-            if (((vectors & SampleContext.UpdateVector.Value) != 0) && ((value = nextContext.Value) != null))
+            if (((vectors & SimpleContext.UpdateVector.Value) != 0) && ((value = nextContext.Value) != null))
             {
                 thisContext.Value = value;
             }
             System.ICloneable tag;
-            if (((vectors & SampleContext.UpdateVector.Tag) != 0) && ((tag = nextContext.Tag) != null))
+            if (((vectors & SimpleContext.UpdateVector.Tag) != 0) && ((tag = nextContext.Tag) != null))
             {
                 thisContext.Tag = (System.ICloneable)tag.Clone();
             }

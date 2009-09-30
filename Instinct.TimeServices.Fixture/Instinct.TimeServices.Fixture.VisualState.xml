@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices.Fixture\Instinct.TimeServices.Fixture.nunit</TopNode>
+  <SelectedNode>[0-1007]Instinct.Time.TimeEngineFixture.AddValueHalfTime</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices.Fixture\Instinct.TimeServices.Fixture.nunit" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1010]F:\_APPLICATION\GOOGLE_\TIMESERVICES\Instinct.TimeServices.Fixture\bin\Debug\Instinct.TimeServices.Fixture.dll" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1011]Instinct" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1012]Instinct.Time" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1001]Instinct.Time.TimeEngineFixture" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1004]Instinct.Time.TimeEngineFixture.AddFutureItemTestExecute" />
+                        <Node UniqueName="[0-1003]Instinct.Time.TimeEngineFixture.AddItemTestExecute" />
+                        <Node UniqueName="[0-1005]Instinct.Time.TimeEngineFixture.AddItemTestMultipleExecute" />
+                        <Node UniqueName="[0-1007]Instinct.Time.TimeEngineFixture.AddValueHalfTime" />
+                        <Node UniqueName="[0-1009]Instinct.Time.TimeEngineFixture.AddValueHibernateTime" />
+                        <Node UniqueName="[0-1008]Instinct.Time.TimeEngineFixture.AddValueWholeTime" />
+                        <Node UniqueName="[0-1006]Instinct.Time.TimeEngineFixture.AddValueZero" />
+                        <Node UniqueName="[0-1002]Instinct.Time.TimeEngineFixture.CreateInstance" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>
