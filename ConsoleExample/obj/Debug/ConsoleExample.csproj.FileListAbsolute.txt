@@ -12,3 +12,5 @@ F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.pdb
 F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.dll
 F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.pdb
 F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ResolveAssemblyReference.cache
+I:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
+I:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
