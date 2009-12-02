@@ -14,3 +14,12 @@ F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServi
 F:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ResolveAssemblyReference.cache
 I:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
 I:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
+G:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
+G:\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.exe
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ConsoleExample.pdb
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.exe
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\ConsoleExample.pdb
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.dll
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\bin\Debug\Instinct.TimeServices.pdb
+C:\_ROAMING\_APPLICATION\GOOGLE_\TIMESERVICES\ConsoleExample\obj\Debug\ResolveAssemblyReference.cache

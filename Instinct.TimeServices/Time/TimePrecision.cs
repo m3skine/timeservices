@@ -20,7 +20,7 @@ namespace Instinct.Time
         {
             int integer = (int)Math.Truncate(time);
             decimal fraction = time - integer;
-            return ((ulong)(integer << TimePrecisionBits) + (ulong)System.Math.Round(fraction / TimeScaleUnit));
+            return ((ulong)(integer << TimePrecisionBits) + (ulong)Math.Round(fraction / TimeScaleUnit));
         }
 
         /// <summary>

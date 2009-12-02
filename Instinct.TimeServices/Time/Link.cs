@@ -1,3 +1,4 @@
+using System;
 using Instinct_;
 namespace Instinct.Time
 {
@@ -15,6 +16,6 @@ namespace Instinct.Time
         /// <summary>
         /// Evaluates the time.
         /// </summary>
-        public System.Action Execute;
+        public Action Execute;
     }
 }
