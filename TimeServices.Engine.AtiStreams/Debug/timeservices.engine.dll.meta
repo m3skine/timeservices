@@ -1,0 +1,23 @@
+Assembly TimeServices.Engine, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Interface TimeServices.Engine.IEngineProvider: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    EvaluateFrame(Int64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class TimeServices.Engine.EngineSettings: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Int32 MaxTimeslices = 1000 : Public, Static, Literal, HasDefault
+    Int32 MaxHibernateSegments = 3 : Public, Static, Literal, HasDefault
+    Int32 MaxWorkingFractions = 10 : Public, Static, Literal, HasDefault
+Class TimeServices.Engine.TimePrecision: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Int32 TimePrecisionBits = 4 : Public, Static, Literal, HasDefault
+    UInt64 TimePrecisionMask = 15 : Public, Static, Literal, HasDefault
+    UInt64 TimeScaler = 16 : Public, Static, Literal, HasDefault
+  Methods:
+    ParseTime(Decimal): PrivateScope, Public, Static, HideBySig
+    FormatTime(UInt64): PrivateScope, Public, Static, HideBySig
+Class TimeServices.Engine.EngineProvider: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Methods:
+    CreateProvider(): PrivateScope, Public, Static, HideBySig
